@@ -1,0 +1,13 @@
+apiversion: v1
+kind: Service
+metadata:
+  name: myservice
+spec:  
+  type: nodePort
+  selector:
+    app: apache
+  ports:
+    -  port: 80
+       targetPort: 80
+       nodePort: 30010
+  
