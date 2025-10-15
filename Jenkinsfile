@@ -19,11 +19,5 @@ pipeline {
                 sh 'sudo docker push intellipaatpra/prt-task'
             }
         }
-    stage('K8s') {
-            steps {
-                sh 'kubectl apply -f deploy.yaml'
-                sh 'kubectl apply -f service.yaml'
-            }
-        }
     }
 }
