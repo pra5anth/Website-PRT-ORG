@@ -14,7 +14,7 @@ pipeline {
         }
     stage('Docker') {
             steps {
-                sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}'
+                sh 'sudo docker login -u pra5anth -p Vinayaga@5'
                 sh 'sudo docker build /home/ubuntu/jenkins/workspace/t2p/ -t intellipaatpra/prt-task'
                 sh 'sudo docker push intellipaatpra/prt-task'
             }
