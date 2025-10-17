@@ -15,8 +15,8 @@ pipeline {
     stage('Docker') {
             steps {
                 sh 'sudo docker login -u pra5anth -p Vinayaga@5'
-                sh 'sudo docker build /home/ubuntu/jenkins/workspace/New-tes/ -t intellipaatpra/prt-task'
-                sh 'sudo docker push intellipaatpra/prt-task'
+                sh 'sudo docker build /home/ubuntu/jenkins/workspace/New-tes/ -t pra5anth/pras/new'
+                sh 'sudo docker push pra5anth/pras/new'
             }
         }
     stage('K8s') {
