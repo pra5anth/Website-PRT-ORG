@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mydeploymentcont
-        image: intellipaatpra/prt-task:latest
+        image: pra5anth/pras/new:latest
         ports:
         - containerPort: 80
