@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        DOCKERHUB_CREDENTIALS = credentials("dhub")
+        DOCKERHUB_CREDENTIALS = credentials("dhubb")
     }
     agent {
         label 'K-M'
@@ -14,7 +14,7 @@ pipeline {
         }
     stage('Docker') {
             steps {
-                sh 'sudo docker login -u pra5anth -p Vinayaga@5'
+                sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}'
                 sh 'sudo docker build /home/ubuntu/jenkins/workspace/New-tes/ -t pra5anth/pras'
                 sh 'sudo docker push pra5anth/pras'
             }
