@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mydeploymentcont
-        image: pra5anth/pras:latest
+        image: pra5anth/web:latest
         ports:
         - containerPort: 80
